@@ -37,7 +37,7 @@
     #all-good p { font-size: 40px; }
     #no-js p { font-size: 35px; }
 
-    .github, .chrome, .firefox {
+    .github, .chrome, .firefox, .safari {
       display: none;
     }
     </style>
@@ -93,6 +93,7 @@
                 <a href="https://github.com/gorhill/uBlock#installation" class="btn btn-lg btn-success github"><img src="images/chrome_32x32.png" /> Get uBlock Origin</a>
                 <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm" class="btn btn-lg btn-success chrome"><img src="images/chrome_32x32.png" /> Get uBlock Origin</a>
                 <a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/" class="btn btn-lg btn-success firefox"><img src="images/firefox_32x32.png" /> Get uBlock Origin</a>
+                <a href="https://safari-extensions.apple.com/details/?id=com.giorgiocalderolla.wipr-desktop-4449XA862Y" class="btn btn-lg btn-success safari"><img src="images/safari_32x32.png" /> Get Wipr</a>
               </p>
             </div>
 
@@ -104,12 +105,13 @@
                 <a href="https://github.com/gorhill/uBlock#installation" class="btn btn-lg btn-success github"><img src="images/chrome_32x32.png" /> Get uBlock Origin</a>
                 <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm" class="btn btn-lg btn-success chrome"><img src="images/chrome_32x32.png" /> Get uBlock Origin</a>
                 <a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/" class="btn btn-lg btn-success firefox"><img src="images/firefox_32x32.png" /> Get uBlock Origin</a>
+                <a href="https://safari-extensions.apple.com/details/?id=com.giorgiocalderolla.wipr-desktop-4449XA862Y" class="btn btn-lg btn-success safari"><img src="images/safari_32x32.png" /> Get Wipr</a>
               </p>
             </div>
 
             <div class="mastfoot">
               <div class="inner">
-                <p>Made by <a href="http://fivefilters.org">FiveFilters.org</a> &bull; <a href="https://github.com/fivefilters/block-ads">Fork, copy, improve</a></p>
+                <p>Made by <a href="http://fivefilters.org">FiveFilters.org</a> &bull; <a href="https://github.com/fivefilters/block-ads">Source</a></p>
               </div>
             </div>
 
@@ -196,11 +198,13 @@
 
       BrowserDetect.init();
       if (BrowserDetect.browser === "Firefox") {
-         $(".firefox").show();
+        $(".firefox").show();
       } else if (BrowserDetect.browser === "Chrome") {
-         $(".chrome").show();
+        $(".chrome").show();
+      } else if (BrowserDetect.browser === "Safari") {
+        $(".safari").show();
       } else {
-         $(".github").show();
+        $(".github").show();
       }
 
     });
